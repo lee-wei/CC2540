@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- ***************************************************************************************************************** -->
+<!--
+BTool Gatt UUID Data Items XML file
+
+Summary of XML tags:
+=====================
+<btool_gatt_uuid>BTool Gatt UUid Data</btool_gatt_uuid> 
+
+  <version>XML layout version</version>
+    Do Not Modify
+
+  ===================================================================
+
+  <cfg_data> Start config data
+
+    <unknown_indl>Unknown indent level</unknown_indl>
+      Valid Range:
+        0 to 255
+
+    <key_width>Key column width</key_width>
+      Valid Range:
+        0 to 255
+
+    <con_hnd_width>Connection Handle column width</con_hnd_width>
+      Valid Range:
+        0 to 255
+
+    <handle_width>Handle column width</handle_width>
+      Valid Range:
+        0 to 255
+
+    <uuid_width>UUID column width</uuid_width>
+      Valid Range:
+        0 to 255
+
+    <uuid_desc_width>UUID Decription column width</uuid_desc_width>
+      Valid Range:
+        0 to 255
+
+    <value_width>Value column width</value_width>
+      Valid Range:
+        0 to 255
+
+    <value_desc_width>Value Description column width</value_desc_width>
+      Valid Range:
+        0 to 255
+
+    <properties_width>Properties column width</properties_width>
+      Valid Range:
+        0 to 255
+
+  </cfg_data>  End config data 
+
+  ===================================================================
+
+  <data_set> Start set of data objects
+
+    <data_set_name>Name for the data set</data_set_name> 
+      Valid Entries:
+      Ascii Text
+
+    <uuid>UUID value</uuid>
+      Valid Range:
+        0x0000 to 0xFFFF
+    
+    <indl>Indent level</indl>
+      Valid Range:
+        0 to 255
+
+    <vopt>Value options</vopt>
+      Valid Entries:
+        Hex - Byte hex value(s) seperated by colons
+        Dec - A unsigned 32 bit value
+        Asc - ASCII string value
+
+    <vedt>Value edit</vedt>
+      Valid Entries:
+        Edit - User entry ok
+        Read - Read only
+
+     <udsc>UUID description text</udsc>
+      Valid Entries:
+        Ascii Text
+
+    
+    <vdsc>UUID value description text</vdsc>
+      Valid Entries:
+        Ascii Text
+    
+    <fore>Foreground Color</fore>
+      Valid Entries:
+        Color Names: at end of file 
+    
+    <back>Background Color</back>
+      Valid Entries:
+        Color Names: at end of file 
+
+  </data_set>  Start set of data objects 
+
+  ===================================================================
+
+-->
+<!-- ***************************************************************************************************************** -->
+
+<btool_gatt_uuid>
+  <version>00.00.03</version>
+  <cfg_data>
+    <unknown_indl>4</unknown_indl>
+    <key_width>70</key_width>
+    <con_hnd_width>55</con_hnd_width>
+    <handle_width>55</handle_width>
+    <uuid_width>55</uuid_width>
+    <uuid_desc_width>225</uuid_desc_width>
+    <value_width>150</value_width>
+    <value_desc_width>175</value_desc_width>
+    <properties_width>144</properties_width>
+  </cfg_data>
+  <data_name>Gatt UUID Data Items</data_name>
+  <!-- ***************************************************************************************************************** -->
+  <data_set>
+    <data_set_name>Declarations</data_set_name>
+    <uuid>0x2900</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Characteristic Extended Properties</udsc>                  <vdsc></vdsc><fore>Black</fore><back>White</back>
+    <uuid>0x2901</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Characteristic User Description</udsc>                     <vdsc></vdsc><fore>Black</fore><back>White</back>
+    <uuid>0x2902</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Client Characteristic Configuration</udsc>                 <vdsc></vdsc><fore>Black</fore><back>White</back>
+    <uuid>0x2903</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Server Characteristic Configuration</udsc>                 <vdsc></vdsc><fore>Black</fore><back>White</back>
+    <uuid>0x2904</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Characteristic Presentation Format</udsc>                  <vdsc></vdsc><fore>Black</fore><back>White</back>
+    <uuid>0x2905</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Characteristic Aggregate Format</udsc>                     <vdsc></vdsc><fore>Black</fore><back>White</back>
+    <uuid>0x2906</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Valid Range</udsc>                                         <vdsc></vdsc><fore>Black</fore><back>White</back>
+    <uuid>0x2907</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>External Report Reference</udsc>                           <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2908</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Report Reference</udsc>                                    <vdsc></vdsc><fore>Black</fore><back>White</back> 
+  </data_set>
+  <!-- ***************************************************************************************************************** -->
+  <data_set>
+    <data_set_name>Characteristics</data_set_name>
+    <uuid>0x2A00</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Device Name</udsc>                                         <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A01</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Appearance</udsc>                                          <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A02</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Peripheral Privacy Flag</udsc>                             <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A03</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Reconnection Address</udsc>                                <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A04</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Peripheral Preferred Connection Parameters</udsc>          <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A05</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Service Changed</udsc>                                     <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A06</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Alert Level</udsc>                                         <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A07</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Tx Power Level</udsc>                                      <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A08</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Date Time</udsc>                                           <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A09</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Day of Week</udsc>                                         <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A0A</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Day Date Time</udsc>                                       <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A0C</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Exact Time 256</udsc>                                      <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A0D</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>DST Offset</udsc>                                          <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A0E</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Time Zone</udsc>                                           <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A0F</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Local Time Information</udsc>                              <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A11</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Time with DST</udsc>                                       <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A12</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Time Accuracy</udsc>                                       <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A13</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Time Source</udsc>                                         <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A14</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Reference Time Information</udsc>                          <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A16</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Time Update Control Point</udsc>                           <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A17</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Time Update State</udsc>                                   <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A18</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Glucose Measurement</udsc>                                 <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A19</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Battery Level</udsc>                                       <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A1C</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Temperature Measurement</udsc>                             <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A1D</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Temperature Type</udsc>                                    <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A1E</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Intermediate Temperature</udsc>                            <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A21</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Measurement Interval</udsc>                                <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A22</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Boot Keyboard Input Report</udsc>                          <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A23</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>System ID</udsc>                                           <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A24</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Model Number String</udsc>                                 <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A25</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Serial Number String</udsc>                                <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A26</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Firmware Revision String</udsc>                            <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A27</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Hardware Revision String</udsc>                            <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A28</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Software Revision String</udsc>                            <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A29</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Manufacturer Name String</udsc>                            <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A2A</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>IEEE 11073-20601 Regulatory Certification Data List</udsc> <vdsc></vdsc><fore>Black</fore><back>White</back>
+    <uuid>0x2A2B</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Current Time</udsc>                                        <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A31</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Scan Refresh</udsc>                                        <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A32</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Boot Keyboard Output Report</udsc>                         <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A33</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Boot Mouse Input Report</udsc>                             <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A34</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Glucose Measurement Context</udsc>                         <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A35</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Blood Pressure Measurement</udsc>                          <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A36</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Intermediate Cuff Pressure</udsc>                          <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A37</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Heart Rate Measurement</udsc>                              <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A38</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Body Sensor Location</udsc>                                <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A39</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Heart Rate Control Point</udsc>                            <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A3F</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Alert Status</udsc>                                        <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A40</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Ringer Control Point</udsc>                                <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A41</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Ringer Setting</udsc>                                      <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A42</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Alert Category ID Bit Mask</udsc>                          <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A43</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Alert Category ID</udsc>                                   <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A44</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Alert Notification Control Point</udsc>                    <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A45</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Unread Alert Status</udsc>                                 <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A46</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>New Alert</udsc>                                           <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A47</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Supported New Alert Category</udsc>                        <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A48</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Supported Unread Alert Category</udsc>                     <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A49</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Blood Pressure Feature</udsc>                              <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A4A</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>HID Information</udsc>                                     <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A4B</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Report Map</udsc>                                          <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A4C</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>HID Control Point</udsc>                                   <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A4D</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Report</udsc>                                              <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A4E</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Protocol Mode</udsc>                                       <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A4F</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Scan Interval Window</udsc>                                <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A50</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>PnP ID</udsc>                                              <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A51</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Glucose Feature</udsc>                                     <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x2A52</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Record Access Control Point</udsc>                         <vdsc></vdsc><fore>Black</fore><back>White</back> 
+  </data_set>
+  <!-- ***************************************************************************************************************** -->
+  <data_set>
+    <data_set_name>Services</data_set_name>
+    <uuid>0x1800</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Generic Access</udsc>                                      <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x1801</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Generic Attribute</udsc>                                   <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x1802</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Immediate Alert</udsc>                                     <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x1803</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Link Loss</udsc>                                           <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x1804</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Tx Power</udsc>                                            <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x1805</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Current Time Service</udsc>                                <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x1806</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Reference Time Update Service</udsc>                       <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x1807</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Next DST Change Service</udsc>                             <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x1808</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Glucose</udsc>                                             <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x1809</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Health Thermometer</udsc>                                  <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x180A</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Device Information</udsc>                                  <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x180D</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Heart Rate</udsc>                                          <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x180E</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Phone Alert Status Service</udsc>                          <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x180F</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Battery Service</udsc>                                     <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x1810</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Blood Pressure</udsc>                                      <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x1811</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Alert Notification Service</udsc>                          <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x1812</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Human Interface Device</udsc>                              <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0x1813</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Scan Parameters</udsc>                                     <vdsc></vdsc><fore>Black</fore><back>White</back> 
+  </data_set>
+  <!-- ***************************************************************************************************************** -->
+  <data_set>
+    <data_set_name>Declarations</data_set_name>
+    <uuid>0x2800</uuid><indl>0</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>GATT Primary Service Declaration</udsc>                    <vdsc></vdsc><fore>Black</fore><back>LightPink</back> 
+    <uuid>0x2801</uuid><indl>2</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>GATT Secondary Service Declaration</udsc>                  <vdsc></vdsc><fore>Black</fore><back>PaleGreen</back> 
+    <uuid>0x2802</uuid><indl>2</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>GATT Include Declaration</udsc>                            <vdsc></vdsc><fore>Black</fore><back>LightBlue</back> 
+    <uuid>0x2803</uuid><indl>2</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>GATT Characteristic Declaration</udsc>                     <vdsc></vdsc><fore>Black</fore><back>PaleGoldenrod</back> 
+  </data_set>
+  <!-- ***************************************************************************************************************** -->
+  <data_set>
+    <data_set_name>Sensor Tag</data_set_name>
+    <uuid>0xF0B0</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>IR Temperature Service</udsc>                              <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF0B1</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>IR Temperature Data</udsc>                                 <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF0B2</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>IR Temperature Config</udsc>                               <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF1B0</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Accelerometer Service</udsc>                               <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF1B1</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Accelerometer Data</udsc>                                  <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF1B2</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Accelerometer Config</udsc>                                <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF1B3</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Accelerometer Period</udsc>                                <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF2B0</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Humidity Service</udsc>                                    <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF2B1</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Humidity Data</udsc>                                       <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF2B2</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Humidity Config</udsc>                                     <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF3B0</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Magnetometer Service</udsc>                                <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF3B1</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Magnetometer Data</udsc>                                   <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF3B2</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Magnetometer Config</udsc>                                 <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF3B3</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Magnetometer Period</udsc>                                 <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF4B0</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Barometer Service</udsc>                                   <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF4B1</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Barometer Data</udsc>                                      <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF4B2</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Barometer Calibration</udsc>                               <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF4B3</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Barometer Configuration</udsc>                             <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF5B0</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Gyroscope Service</udsc>                                   <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF5B1</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Gyroscope Data</udsc>                                      <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF5B2</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Gyroscope Config</udsc>                                    <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF6B0</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Test Service</udsc>                                        <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF6B1</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Test Data</udsc>                                           <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xF6B2</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Test Config</udsc>                                         <vdsc></vdsc><fore>Black</fore><back>White</back> 
+  </data_set>
+  <!-- ***************************************************************************************************************** -->
+  <data_set>
+    <data_set_name>Accelerometer</data_set_name>
+    <uuid>0xFFA0</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Accelerometer Service</udsc>                               <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xFFA1</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Accererometer enable</udsc>                                <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xFFA2</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Accelerometer range</udsc>                                 <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xFFA3</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Accelerometer X-coordinate</udsc>                          <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xFFA4</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Accelerometer Y-coordinate</udsc>                          <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xFFA5</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Accelerometer Z-coordinate</udsc>                          <vdsc></vdsc><fore>Black</fore><back>White</back> 
+  </data_set>
+  <!-- ***************************************************************************************************************** -->
+  <data_set>
+    <data_set_name>Simple Keys</data_set_name>
+    <uuid>0xFFE0</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Simple Keys Service</udsc>                                 <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xFFE1</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Key press state</udsc>                                     <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xFFE2</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Accelerometer range</udsc>                                 <vdsc></vdsc><fore>Black</fore><back>White</back> 
+  </data_set>
+  <!-- ***************************************************************************************************************** -->
+  <data_set>
+    <data_set_name>Racing Car</data_set_name>
+    <uuid>0xACC0</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Racing Car Service</udsc>                                  <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xACC1</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Throttle</udsc>                                            <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xACC2</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Steering</udsc>                                            <vdsc></vdsc><fore>Black</fore><back>White</back> 
+    <uuid>0xACC3</uuid><indl>4</indl><vdsp>Hex</vdsp><vedt>Edit</vedt>   <udsc>Lights/Horn</udsc>                                         <vdsc></vdsc><fore>Black</fore><back>White</back> 
+  </data_set>
+  <!-- ***************************************************************************************************************** -->
+</btool_gatt_uuid>
+
+
+<!--
+Valid Color Names:
+
+AliceBlue
+AntiqueWhite
+Aqua
+Aquamarine
+Azure
+Beige
+Bisque
+Black
+BlanchedAlmond
+Blue
+BlueViolet
+Brown
+BurlyWood
+CadetBlue
+Chartreuse
+Chocolate
+Coral
+CornflowerBlue
+Cornsilk
+Crimson
+Cyan
+DarkBlue
+DarkCyan
+DarkGoldenrod
+DarkGray
+DarkGreen
+DarkKhaki
+DarkMagenta
+DarkOliveGreen
+DarkOrange
+DarkOrchid
+DarkRed
+DarkSalmon
+DarkSeaGreen
+DarkSlateBlue
+DarkSlateGray
+DarkTurquoise
+DarkViolet
+DeepPink
+DeepSkyBlue
+DimGray
+DodgerBlue
+Firebrick
+FloralWhite
+ForestGreen
+Fuchsia
+Gainsboro
+GhostWhite
+Gold
+Goldenrod
+Gray
+Green
+GreenYellow
+Honeydew
+HotPink
+IndianRed
+Indigo
+Ivory
+Khaki
+Lavender
+LavenderBlush
+LawnGreen
+LemonChiffon
+LightBlue
+LightCoral
+LightCyan
+LightGoldenrodYellow
+LightGray
+LightGreen
+LightPink
+LightSalmon
+LightSeaGreen
+LightSkyBlue
+LightSlateGray
+LightSteelBlue
+LightYellow
+Lime
+LimeGreen
+Linen
+Magenta
+Maroon
+MediumAquamarine
+MediumBlue
+MediumOrchid
+MediumPurple
+MediumSeaGreen
+MediumSlateBlue
+MediumSpringGreen
+MediumTurquoise
+MediumVioletRed
+MidnightBlue
+MintCream
+MistyRose
+Moccasin
+NavajoWhite
+Navy
+OldLace
+Olive
+OliveDrab
+Orange
+OrangeRed
+Orchid
+PaleGoldenrod
+PaleGreen
+PaleTurquoise
+PaleVioletRed
+PapayaWhip
+PeachPuff
+Peru
+Pink
+Plum
+PowderBlue
+Purple
+Red
+RosyBrown
+RoyalBlue
+SaddleBrown
+Salmon
+SandyBrown
+SeaGreen
+SeaShell
+Sienna
+Silver
+SkyBlue
+SlateBlue
+SlateGray
+Snow
+SpringGreen
+SteelBlue
+Tan
+Teal
+Thistle
+Tomato
+Turquoise
+Violet
+Wheat
+White
+WhiteSmoke
+Yellow
+YellowGreen
+-->
+
