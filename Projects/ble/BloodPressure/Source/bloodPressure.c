@@ -23,7 +23,7 @@
   its documentation for any purpose.
 
   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
-  PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+  PROVIDED â€œAS ISâ€ WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
@@ -625,6 +625,8 @@ uint16 BloodPressure_ProcessEvent( uint8 task_id, uint16 events )
  */
 static void bloodPressure_ProcessOSALMsg( osal_event_hdr_t *pMsg )
 {
+  //Modified by @svr
+  if(pMsg) {
   switch ( pMsg->event )
   {
   case KEY_CHANGE:
@@ -637,6 +639,9 @@ static void bloodPressure_ProcessOSALMsg( osal_event_hdr_t *pMsg )
   default:
       break;
   }
+  } //Endofif
+  else
+       return;
 }
 
 /*********************************************************************
@@ -707,9 +712,12 @@ static void bloodPressure_HandleKeys( uint8 shift, uint8 keys )
 static void bpFinalMeas(void)
 {
     
+    /*
   // att value notification structure 
   uint8 *p = bloodPressureMeas.value;
-  
+  */
+  //pointer Assignment  --- Modified by @svr
+  uint8 *p = (uint8 *)&(bloodPressureMeas.value);
   //flags
   uint8 flags = bloodPressureFlags[bloodPressureFlagsIdx];
   
@@ -1115,7 +1123,7 @@ static void cuffMeas(void)
   *p++ = flags;
 
   //bloodpressure components 
-  // IEEE The 16–bit value contains a 4-bit exponent to base 10, 
+  // IEEE The 16â€“bit value contains a 4-bit exponent to base 10, 
   // followed by a 12-bit mantissa. Each is in twoscomplementform.
   *p++ = bpSystolic;  //120 = 0x0078  SFloat little endian = 0x7800 
   *p++;
