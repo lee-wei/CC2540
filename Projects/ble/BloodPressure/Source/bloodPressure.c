@@ -23,7 +23,7 @@
   its documentation for any purpose.
 
   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
-  PROVIDED ìAS ISî WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+  PROVIDED ‚ÄúAS IS‚Äù WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
@@ -161,17 +161,19 @@ static gaprole_States_t gapProfileState = GAPROLE_INIT;
 static uint8 timeAppDiscState = DISC_IDLE;
 
 // Service discovery complete
-static uint8 timeAppDiscoveryCmpl = FALSE;
+//static uint8 timeAppDiscoveryCmpl = FALSE;
+static bool timeAppDiscoveryCmpl = FALSE; //modified by @svr
 
 // Characteristic configuration state
 static uint8 timeAppConfigState = TIMEAPP_CONFIG_START;
 
 // TRUE if pairing started
-static uint8 timeAppPairingStarted = FALSE;
+//static uint8 timeAppPairingStarted = FALSE;
+static bool timeAppPairingStarted = FALSE; //modified by @svr
 
 // TRUE if discovery postponed due to pairing
 static uint8 timeAppDiscPostponed = FALSE;
-
+static bool timeAppDiscPostponed = FALSE; //modified by @svr
 
 // GAP Profile - Name attribute for SCAN RSP data
 static uint8 scanResponseData[] =
@@ -416,9 +418,11 @@ void BloodPressure_Init( uint8 task_id )
   {
     uint32 passkey = 0; // passkey "000000"
     uint8 pairMode = GAPBOND_PAIRING_MODE_WAIT_FOR_REQ;
-    uint8 mitm = FALSE;
+    //uint8 mitm = FALSE;
+    bool mitm = FALSE; //modified by @svr
     uint8 ioCap = GAPBOND_IO_CAP_DISPLAY_ONLY;
-    uint8 bonding = TRUE;
+    //uint8 bonding = TRUE;
+    bool bonding = TRUE; //modified by @svr
     GAPBondMgr_SetParameter( GAPBOND_DEFAULT_PASSCODE, sizeof ( uint32 ), &passkey );
     GAPBondMgr_SetParameter( GAPBOND_PAIRING_MODE, sizeof ( uint8 ), &pairMode );
     GAPBondMgr_SetParameter( GAPBOND_MITM_PROTECTION, sizeof ( uint8 ), &mitm );
@@ -1115,7 +1119,7 @@ static void cuffMeas(void)
   *p++ = flags;
 
   //bloodpressure components 
-  // IEEE The 16ñbit value contains a 4-bit exponent to base 10, 
+  // IEEE The 16‚Äìbit value contains a 4-bit exponent to base 10, 
   // followed by a 12-bit mantissa. Each is in twoscomplementform.
   *p++ = bpSystolic;  //120 = 0x0078  SFloat little endian = 0x7800 
   *p++;
