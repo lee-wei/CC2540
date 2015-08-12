@@ -22,7 +22,7 @@
   its documentation for any purpose.
 
   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
-  PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+  PROVIDED â€œAS ISâ€ WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
@@ -421,6 +421,7 @@ uint16 GlucColl_ProcessEvent( uint8 task_id, uint16 events )
  */
 static void glucCollCentral_ProcessOSALMsg( osal_event_hdr_t *pMsg )
 {
+  if(pMsg){
   switch ( pMsg->event )
   {
     case KEY_CHANGE:
@@ -431,6 +432,8 @@ static void glucCollCentral_ProcessOSALMsg( osal_event_hdr_t *pMsg )
       glucCollProcessGATTMsg( (gattMsgEvent_t *) pMsg );
       break;
   }
+  }
+  else return;
 }
 
 /*********************************************************************
@@ -624,6 +627,8 @@ static void glucColl_HandleKeys( uint8 shift, uint8 keys )
  */
 static void glucCollProcessGATTMsg( gattMsgEvent_t *pMsg )
 {
+  if (pMsg == NULL)
+     return;
   if ( pMsg->method == ATT_HANDLE_VALUE_NOTI ||
        pMsg->method == ATT_HANDLE_VALUE_IND )
   {
@@ -963,7 +968,7 @@ static bool glucCollFindSvcUuid( uint16 uuid, uint8 *pData, uint8 dataLen )
 static void glucCollAddDeviceInfo( uint8 *pAddr, uint8 addrType )
 {
   uint8 i;
-  
+  if(pAddr){        //Added by @svrsure
   // If result count not at max
   if ( glucCollScanRes < DEFAULT_MAX_SCAN_RES )
   {
@@ -984,6 +989,9 @@ static void glucCollAddDeviceInfo( uint8 *pAddr, uint8 addrType )
     glucCollScanRes++;
   }
 }
+ else
+     return;
+}
 
 /*********************************************************************
  * @fn      bdAddr2Str
@@ -994,6 +1002,7 @@ static void glucCollAddDeviceInfo( uint8 *pAddr, uint8 addrType )
  */
 char *bdAddr2Str( uint8 *pAddr )
 {
+  if(pAddr){                            //Added by @svrsure
   uint8       i;
   char        hex[] = "0123456789ABCDEF";
   static char str[B_ADDR_STR_LEN];
@@ -1014,6 +1023,9 @@ char *bdAddr2Str( uint8 *pAddr )
   *pStr = 0;
   
   return str;
+} //if 
+ else
+      return NULL;
 }
 
 /*********************************************************************
