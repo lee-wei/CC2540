@@ -22,7 +22,7 @@
   its documentation for any purpose.
 
   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
-  PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+  PROVIDED â€œAS ISâ€ WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
@@ -138,6 +138,7 @@
 #define DEFAULT_DEV_DISC_BY_SVC_UUID          FALSE
 
 // Application states
+/*
 enum
 {
   BLE_STATE_IDLE,
@@ -145,6 +146,14 @@ enum
   BLE_STATE_CONNECTED,
   BLE_STATE_DISCONNECTING
 };
+*/
+enum
+{
+  BLE_STATE_IDLE,
+  BLE_STATE_CONNECTING,
+  BLE_STATE_CONNECTED,
+  BLE_STATE_DISCONNECTING
+}bleapp_status;                       //Modified by @svrsure
 
 /*********************************************************************
  * TYPEDEFS
@@ -689,6 +698,7 @@ static void glucCollCentralRssiCB( uint16 connHandle, int8 rssi )
  */
 static void glucCollCentralEventCB( gapCentralRoleEvent_t *pEvent )
 {
+  if(pEvent){                                    //Code added by @svr
   switch ( pEvent->gap.opcode )
   {
     case GAP_DEVICE_INIT_DONE_EVENT:  
@@ -800,6 +810,9 @@ static void glucCollCentralEventCB( gapCentralRoleEvent_t *pEvent )
     default:
       break;
   }
+  } //Null Check 
+  else 
+      return;
 }
 
 /*********************************************************************
