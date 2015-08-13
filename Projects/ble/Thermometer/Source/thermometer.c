@@ -22,7 +22,7 @@
   its documentation for any purpose.
 
   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
-  PROVIDED ìAS ISî WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+  PROVIDED ‚ÄúAS IS‚Äù WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
@@ -595,6 +595,9 @@ static void thermometer_HandleKeys( uint8 shift, uint8 keys )
  
   bStatus_t status; 
   uint8 notify_interval;
+  uint8 current_adv_enabled_status;
+  uint8 new_adv_enabled_status;
+  uint8 thInterval = 30;
   
   if ( keys & HAL_KEY_SW_1 )
   {
@@ -622,8 +625,8 @@ static void thermometer_HandleKeys( uint8 shift, uint8 keys )
     // advertising on and off. If timer is running, then will adv when meas is ready
     if((gapProfileState != GAPROLE_CONNECTED) &&  (thMeasTimerRunning == FALSE))
     {
-      uint8 current_adv_enabled_status;
-      uint8 new_adv_enabled_status;
+      //uint8 current_adv_enabled_status;
+      //uint8 new_adv_enabled_status;
       
       //Find the current GAP advertisement status
       GAPRole_GetParameter( GAPROLE_ADVERT_ENABLED, &current_adv_enabled_status );
@@ -649,7 +652,7 @@ static void thermometer_HandleKeys( uint8 shift, uint8 keys )
       }
       else
       {
-        uint8 thInterval = 30;
+        //uint8 thInterval = 30;
         attHandleValueInd_t intervalIndication;
         
         thermometerCelcius = 0X000173;
