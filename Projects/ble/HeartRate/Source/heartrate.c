@@ -22,7 +22,7 @@ Copyright 2011 Texas Instruments Incorporated. All rights reserved.
   its documentation for any purpose.
 
   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
-  PROVIDED ìAS ISî WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
+  PROVIDED ‚ÄúAS IS‚Äù WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, 
   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
@@ -208,7 +208,8 @@ static bool heartRateAdvCancelled = FALSE;
  * LOCAL FUNCTIONS
  */
 static void heartRate_ProcessOSALMsg( osal_event_hdr_t *pMsg );
-static void HeartRateGapStateCB( gaprole_States_t newState );
+//static void HeartRateGapStateCB( gaprole_States_t newState );
+static void HeartRateGapStateCB( gaprole_States_t *newState );
 static void heartRatePeriodicTask( void );
 static void heartRateBattPeriodicTask( void );
 static void heartRate_HandleKeys( uint8 shift, uint8 keys );
@@ -541,17 +542,17 @@ static void heartRateMeasNotify(void)
  *
  * @return  none
  */
-static void HeartRateGapStateCB( gaprole_States_t newState )
+static void HeartRateGapStateCB( gaprole_States_t *newState )
 {
   // if connected
-  if (newState == GAPROLE_CONNECTED)
+  if (*newState == GAPROLE_CONNECTED)
   {
     // get connection handle
     GAPRole_GetParameter(GAPROLE_CONNHANDLE, &gapConnHandle);
   }
   // if disconnected
   else if (gapProfileState == GAPROLE_CONNECTED && 
-           newState != GAPROLE_CONNECTED)
+           *newState != GAPROLE_CONNECTED)
   {
     uint8 advState = TRUE;
 
@@ -562,7 +563,7 @@ static void HeartRateGapStateCB( gaprole_States_t newState )
     HeartRate_HandleConnStatusCB( gapConnHandle, LINKDB_STATUS_UPDATE_REMOVED );
     Batt_HandleConnStatusCB( gapConnHandle, LINKDB_STATUS_UPDATE_REMOVED );
 
-    if ( newState == GAPROLE_WAITING_AFTER_TIMEOUT )
+    if ( *newState == GAPROLE_WAITING_AFTER_TIMEOUT )
     {
       // link loss timeout-- use fast advertising
       GAP_SetParamValue( TGAP_GEN_DISC_ADV_INT_MIN, DEFAULT_FAST_ADV_INTERVAL );
@@ -582,7 +583,7 @@ static void HeartRateGapStateCB( gaprole_States_t newState )
   }    
   // if advertising stopped
   else if ( gapProfileState == GAPROLE_ADVERTISING && 
-            newState == GAPROLE_WAITING )
+            *newState == GAPROLE_WAITING )
   {
     // if advertising stopped by user
     if ( heartRateAdvCancelled )
@@ -601,7 +602,7 @@ static void HeartRateGapStateCB( gaprole_States_t newState )
     }  
   }
   // if started
-  else if (newState == GAPROLE_STARTED)
+  else if (*newState == GAPROLE_STARTED)
   {
     // Set the system ID from the bd addr
     uint8 systemId[DEVINFO_SYSTEM_ID_LEN];
@@ -619,7 +620,7 @@ static void HeartRateGapStateCB( gaprole_States_t newState )
     DevInfo_SetParameter(DEVINFO_SYSTEM_ID, DEVINFO_SYSTEM_ID_LEN, systemId);
   }
   
-  gapProfileState = newState;
+  gapProfileState = *newState;
 }
 
 /*********************************************************************
