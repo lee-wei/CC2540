@@ -22,7 +22,7 @@
   its documentation for any purpose.
 
   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
-  PROVIDED ìAS ISî WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+  PROVIDED ‚ÄúAS IS‚Äù WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
@@ -437,14 +437,16 @@ void Thermometer_Init( uint8 task_id )
  */
 uint16 Thermometer_ProcessEvent( uint8 task_id, uint16 events )
 {
-  
+  uint8 *pMsg;
   VOID task_id; // OSAL required parameter that isn't used in this function
   uint8 notify_interval;
   int32 n32;
   
+  pMsg = (uint8 *)malloc(16);
+  if(pMsg){
   if ( events & SYS_EVENT_MSG )
   {
-    uint8 *pMsg;
+   // uint8 *pMsg;
 
     if ( (pMsg = osal_msg_receive( thermometerTaskId )) != NULL )
     {
@@ -457,7 +459,10 @@ uint16 Thermometer_ProcessEvent( uint8 task_id, uint16 events )
     // return unprocessed events
     return (events ^ SYS_EVENT_MSG);
   }
-
+}
+  free(pMsg);
+  pMsg = NULL;
+  
   if ( events & TH_START_DEVICE_EVT )
   {
     // Start the Device
