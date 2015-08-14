@@ -23,7 +23,7 @@
   its documentation for any purpose.
 
   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
-  PROVIDED ìAS ISî WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+  PROVIDED ‚ÄúAS IS‚Äù WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
@@ -98,7 +98,7 @@
 #define B_ADDR_STR_LEN                        15
 
 // Whether to enable automatic parameter update request when a connection is formed
-#define DEFAULT_ENABLE_UPDATE_REQUEST         FALSE
+//#define DEFAULT_ENABLE_UPDATE_REQUEST         FALSE
 
 // Default GAP pairing mode
 #define DEFAULT_PAIRING_MODE                  GAPBOND_PAIRING_MODE_INITIATE
@@ -1115,7 +1115,7 @@ static void cuffMeas(void)
   *p++ = flags;
 
   //bloodpressure components 
-  // IEEE The 16ñbit value contains a 4-bit exponent to base 10, 
+  // IEEE The 16‚Äìbit value contains a 4-bit exponent to base 10, 
   // followed by a 12-bit mantissa. Each is in twoscomplementform.
   *p++ = bpSystolic;  //120 = 0x0078  SFloat little endian = 0x7800 
   *p++;
