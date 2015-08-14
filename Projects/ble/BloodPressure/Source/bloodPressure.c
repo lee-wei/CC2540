@@ -23,7 +23,7 @@
   its documentation for any purpose.
 
   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
-  PROVIDED ìAS ISî WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+  PROVIDED ‚ÄúAS IS‚Äù WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
@@ -708,7 +708,7 @@ static void bpFinalMeas(void)
 {
     
   // att value notification structure 
-  uint8 *p = bloodPressureMeas.value;
+  uint8 *p = &bloodPressureMeas.value;
   
   //flags
   uint8 flags = bloodPressureFlags[bloodPressureFlagsIdx];
@@ -1106,7 +1106,7 @@ static void cuffMeas(void)
   HalLedSet ( HAL_LED_4, HAL_LED_MODE_BLINK );
   
   // att value notification structure 
-  uint8 *p = bloodPressureIMeas.value;
+  uint8 *p = &bloodPressureIMeas.value;
   
   //flags
   uint8 flags = BLOODPRESSURE_FLAGS_MMHG |BLOODPRESSURE_FLAGS_PULSE | BLOODPRESSURE_FLAGS_USER| BLOODPRESSURE_FLAGS_STATUS;
@@ -1115,7 +1115,7 @@ static void cuffMeas(void)
   *p++ = flags;
 
   //bloodpressure components 
-  // IEEE The 16ñbit value contains a 4-bit exponent to base 10, 
+  // IEEE The 16‚Äìbit value contains a 4-bit exponent to base 10, 
   // followed by a 12-bit mantissa. Each is in twoscomplementform.
   *p++ = bpSystolic;  //120 = 0x0078  SFloat little endian = 0x7800 
   *p++;
