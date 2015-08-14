@@ -21,7 +21,7 @@
   its documentation for any purpose.
 
   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
-  PROVIDED ìAS ISî WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+  PROVIDED ‚ÄúAS IS‚Äù WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
@@ -129,20 +129,21 @@ uint8 timeAppDiscStart( void )
 uint8 timeAppDiscGattMsg( uint8 state, gattMsgEvent_t *pMsg )
 {
   // Execute discovery function for service
+  uint8 RetValTime;
   do
   {
     switch ( state & 0xF0 )
     {
       // Current time service
       case DISC_CURR_TIME_START:
-        state = TimeAppDiscCurrTime( state, pMsg );
-        if ( state == DISC_FAILED )
+        RetValTime = TimeAppDiscCurrTime( state, pMsg );
+        if ( RetValTime == DISC_FAILED )
         {
-          state = DISC_FAILED;
+          RetValTime = DISC_FAILED;
         }
-        else if ( state == DISC_IDLE )
+        else if ( RetValTime == DISC_IDLE )
         {
-          state = DISC_IDLE;
+          RetValTime = DISC_IDLE;
         }
         break;
 
